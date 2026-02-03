@@ -1,0 +1,53 @@
+/* ===== GLOBAL ===== */
+* { box-sizing: border-box; margin:0; padding:0; font-family: 'Poppins', sans-serif; }
+body { background: #F4F4F4; color: #111; line-height: 1.5; }
+button { cursor: pointer; border: none; }
+.container { width: 90%; max-width: 600px; margin: auto; padding: 20px; }
+
+/* ===== HEADER ===== */
+header { text-align: center; margin-bottom: 30px; }
+header h1 { font-size: 2rem; color: #111; margin-bottom: 10px; }
+header p { font-size: 1rem; color: #555; }
+
+/* ===== BUTTON ===== */
+.btn { background: #C9A24D; color: #fff; padding: 12px 20px; border-radius: 12px; font-weight: 600; display: inline-block; margin: 10px 0; transition: 0.3s; }
+.btn:hover { background: #b58f43; }
+
+/* ===== SECTIONS ===== */
+section { margin-bottom: 30px; }
+
+/* ===== CALENDAR / TIME SLOTS ===== */
+.calendar, .time-slots { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.time-slot { background: #fff; padding: 10px 15px; border-radius: 12px; cursor: pointer; transition: 0.3s; }
+.time-slot.selected { background: #C9A24D; color: #fff; }
+.time-slot.blocked { background: #ccc; cursor: not-allowed; }
+
+/* ===== SERVICE CARDS ===== */
+.services { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.service-card { background: #fff; padding: 15px; border-radius: 12px; flex: 1 1 45%; text-align: center; cursor: pointer; transition: 0.3s; }
+.service-card.selected { background: #C9A24D; color: #fff; }
+
+/* ===== BARBER CARDS ===== */
+.barbers { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.barber-card { background: #fff; padding: 15px; border-radius: 12px; text-align: center; width: 30%; cursor: pointer; transition: 0.3s; }
+.barber-card.selected { background: #C9A24D; color: #fff; }
+
+/* ===== FORM ===== */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+.form-group input, .form-group textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; }
+
+/* ===== SUMMARY CARD ===== */
+.summary { background: #fff; padding: 15px; border-radius: 12px; margin-bottom: 15px; }
+.summary p { margin: 5px 0; }
+
+/* ===== STAR RATING ===== */
+.stars { display: flex; gap: 5px; margin-bottom: 10px; }
+.stars span { font-size: 1.5rem; cursor: pointer; color: #ccc; transition: 0.3s; }
+.stars span.selected, .stars span:hover, .stars span.hover { color: #C9A24D; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:500px){
+  .service-card { flex: 1 1 100%; }
+  .barber-card { width: 45%; }
+}
