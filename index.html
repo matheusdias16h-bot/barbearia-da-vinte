@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbearia da Vinte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- HOME -->
+    <header>
+      <h1>Barbearia da Vinte</h1>
+      <p>Agende seu horário rápido e fácil</p>
+      <button class="btn" onclick="showSection('bookingSection')">Agendar Agora</button>
+    </header>
+
+    <!-- BOOKING -->
+    <section id="bookingSection" style="display:none;">
+      <h2>Escolha a Data</h2>
+      <div class="calendar" id="calendar"></div>
+      <h2>Escolha o Horário</h2>
+      <div class="time-slots" id="timeSlots"></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicesSection" style="display:none;">
+      <h2>Escolha o Serviço</h2>
+      <div class="services" id="servicesList"></div>
+    </section>
+
+    <!-- BARBERS -->
+    <section id="barbersSection" style="display:none;">
+      <h2>Escolha o Barbeiro</h2>
+      <div class="barbers" id="barbersList"></div>
+    </section>
+
+    <!-- CLIENT SIGNUP -->
+    <section id="signupSection" style="display:none;">
+      <h2>Seus Dados</h2>
+      <div class="form-group">
+        <label for="clientName">Nome</label>
+        <input type="text" id="clientName" placeholder="Digite seu nome">
+      </div>
+      <div class="form-group">
+        <label for="clientPhone">WhatsApp</label>
+        <input type="tel" id="clientPhone" placeholder="(11) 99999-9999">
+      </div>
+      <button class="btn" onclick="confirmBooking()">Confirmar Agendamento</button>
+    </section>
+
+    <!-- CONFIRMATION -->
+    <section id="confirmationSection" style="display:none;">
+      <h2>Confirmação do Agendamento</h2>
+      <div class="summary" id="summaryCard"></div>
+    </section>
+
+    <!-- RATING -->
+    <section id="ratingSection" style="display:none;">
+      <h2>Avalie seu Barbeiro</h2>
+      <div class="stars" id="starRating">
+        <span data-value="1">&#9733;</span>
+        <span data-value="2">&#9733;</span>
+        <span data-value="3">&#9733;</span>
+        <span data-value="4">&#9733;</span>
+        <span data-value="5">&#9733;</span>
+      </div>
+      <div class="form-group">
+        <textarea id="ratingComment" placeholder="Comentário (opcional)"></textarea>
+      </div>
+      <button class="btn" onclick="submitRating()">Enviar Avaliação</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
